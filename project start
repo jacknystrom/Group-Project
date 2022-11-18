@@ -1,0 +1,82 @@
+var currentScene = 0;
+  // Start of Khan button class
+var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 150;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+    this.onClick = config.onClick || function() {};
+    this.buttonColor = config.buttonColor || color(0,0,0);
+};
+
+Button.prototype.draw = function() {
+    fill(this.buttonColor);
+    rect(this.x, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+10, this.y+this.height/4);
+};
+
+Button.prototype.isMouseInside = function() {
+    return (
+    mouseX > this.x &&
+    mouseX < (this.x + this.width) &&
+    mouseY > this.y &&
+    mouseY < (this.y + this.height));
+};
+
+Button.prototype.handleMouseClick = function() {
+    if (this.isMouseInside()) {
+        this.onClick();
+    }
+};
+
+var startButton= new Button({
+ x:100,
+    y:200,
+    onClick:function(){currentScene=1;},
+    buttonColor:color(199, 48, 101)});
+
+
+  // End of Kahn button class
+  
+  
+  var splashScreen=function(){
+       fill(255, 255, 255);
+  background(3, 198, 252);
+  textSize(52);
+  text(" Ball Maze",21,46);
+  fill(127, 143, 141);
+ 
+ 
+  startButton.draw();
+ 
+    textSize(15);
+    fill(255, 255, 255);
+  text("By: Akram Abdelrehem and Jack Nystrom",87,114);
+      
+  };
+  
+  var screen2=function(){
+   background(33, 26, 33);
+ };
+
+  draw = function() {
+       if(currentScene===0){
+           splashScreen();
+       }else if (currentScene===1){
+           screen2();
+       }
+     
+  };
+  
+  
+  //Mouse clicked function
+  
+  mouseClicked= function(){
+      if(currentScene===0){
+          startButton.handleMouseClick();
+      }
+  };
