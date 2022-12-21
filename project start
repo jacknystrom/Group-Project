@@ -1,4 +1,160 @@
+//the code for Akrams bitmoji
+var drawHead2 = function(bitmojiX, bitmojiY, bitmojiHeight)
+{
+noStroke();
+fill(219, 168, 144);
+ellipse(bitmojiX,bitmojiY,bitmojiHeight,128*bitmojiHeight/100); //head
+
+
+
+fill(0, 0, 0);
+ellipse(bitmojiX-57*bitmojiHeight/100,bitmojiY-3*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //left hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX-51*bitmojiHeight/100,bitmojiY-24*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //above left hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX-42*bitmojiHeight/100,bitmojiY-42*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //2 above left hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX-31*bitmojiHeight/100,bitmojiY-59*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //3 above left hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX-8*bitmojiHeight/100,bitmojiY-68*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //4 above left hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX+18*bitmojiHeight/100,bitmojiY-60*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //3 above right hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX+38*bitmojiHeight/100,bitmojiY-44*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //2 above right air
+
+fill(0, 0, 0);
+ellipse(bitmojiX+50*bitmojiHeight/100,bitmojiY-26*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); //1 above right hair
+
+fill(0, 0, 0);
+ellipse(bitmojiX+55*bitmojiHeight/100,bitmojiY-7*bitmojiHeight/100,32*bitmojiHeight/100,25*bitmojiHeight/100); // right hair
+
+fill(255, 255, 255);
+ellipse(bitmojiX-18*bitmojiHeight/100,bitmojiY-19*bitmojiHeight/100,23*bitmojiHeight/100,15*bitmojiHeight/100); //left eye
+
+fill(0, 0, 0);
+ellipse(bitmojiX-15*bitmojiHeight/100,bitmojiY-17*bitmojiHeight/100,13*bitmojiHeight/100,10*bitmojiHeight/100); //left pupil
+
+fill(255, 255, 255);
+ellipse(bitmojiX+19*bitmojiHeight/100,bitmojiY-19*bitmojiHeight/100,23*bitmojiHeight/100,15*bitmojiHeight/100); //right eye
+
+fill(0, 0, 0);
+ellipse(bitmojiX+23*bitmojiHeight/100,bitmojiY-17*bitmojiHeight/100,13*bitmojiHeight/100,10*bitmojiHeight/100); //right pupil
+
+fill(219, 168, 144);
+stroke(0, 0, 0);
+bezier(bitmojiX,bitmojiY,bitmojiX+21*bitmojiHeight/100,bitmojiY+22*bitmojiHeight/100,bitmojiX-8*bitmojiHeight/100,bitmojiY+20*bitmojiHeight/100,bitmojiX-4*bitmojiHeight/100,bitmojiY+15*bitmojiHeight/100); //nose
+
+fill(252, 156, 246);
+arc(bitmojiX+1*bitmojiHeight/100,bitmojiY+29*bitmojiHeight/100,32*bitmojiHeight/100,14*bitmojiHeight/100,1*bitmojiHeight/100,180*bitmojiHeight/100); //mouth
+
+
+
+fill(0, 0, 0);
+ellipse(bitmojiX-19*bitmojiHeight/100,bitmojiY-33*bitmojiHeight/100,28*bitmojiHeight/100,6*bitmojiHeight/100); //left eyebrow
+
+fill(0, 0, 0);
+ellipse(bitmojiX+19*bitmojiHeight/100,bitmojiY-33*bitmojiHeight/100,28*bitmojiHeight/100,6*bitmojiHeight/100); //right eyebrow
+};
+
+var drawBody2 = function(bitmojiX,bitmojiY,bitmojiHeight)
+{
+fill(219, 168, 144);
+fill(219, 168, 144);
+noStroke();
+ellipse(bitmojiX-1*bitmojiHeight/100,bitmojiY+68*bitmojiHeight/100,34*bitmojiHeight/100,49*bitmojiHeight/100); //neck
+
+fill(240, 231, 231);
+quad(bitmojiX+86*bitmojiHeight/100,bitmojiY+118*bitmojiHeight/100,bitmojiX-67*bitmojiHeight/100,bitmojiY+120*bitmojiHeight/100,bitmojiX-52*bitmojiHeight/100,bitmojiY+74*bitmojiHeight/100,bitmojiX+41*bitmojiHeight/100,bitmojiY+77*bitmojiHeight/100); //shirt
+
+fill(252, 10, 10);
+text("AA",bitmojiX+27*bitmojiHeight/100,bitmojiY+99*bitmojiHeight/100); //initials
+};
+
+
+
+ var drawBitmoji2 = function(bitmojiX,bitmojiY,bitmojiHeight)
+ {
+     drawHead2 (bitmojiX,bitmojiY,bitmojiHeight);
+drawBody2 (bitmojiX,bitmojiY,bitmojiHeight);
+};
+
+
+//function to draw Jacks Bitmoji
+var drawShirt=function(x,y,h){
+    
+    fill(94, 84, 84);
+    rect(x+136*h,y+224*h,133*h,54*h);
+    stroke(196, 63, 189);
+    ellipse(x+200*h,y+251*h,50*h,50*h);
+    fill(240*h, 235*h, 235*h);
+    textSize(20*h);
+    text('JN',x+187*h,y+258*h);
+
+};
+var drawEyes=function(x,y,h){
+    
+     fill(245, 245, 245);
+    ellipse(x+180*h,y+145*h,20*h,17*h);//eye left
+    ellipse(x+220*h,y+145*h,20*h,17*h);//eye right
+    fill(66, 66, 39);
+    ellipse(x+180*h,y+145*h,10*h,10*h);//eye left
+    ellipse(x+220*h,y+145*h,10*h,10*h);//eye right
+};
+var drawHead=function(x,y,h){
+fill(20, 17, 17);
+ellipse(x+200*h,y+130*h,105*h,93*h);//headphoe strap
+fill(244, 247, 215);
+rect(x+175*h,y+183*h,50*h,40*h);//neck
+ellipse(x+200*h,y+150*h,100*h,120*h);//head
+};
+var drawHair=function(x,y,h){
+    fill(13, 12, 12);
+ellipse(x+150*h,y+135*h,20*h,50*h);//headphone earmuff left
+ellipse(x+250*h,y+135*h,20*h,50*h);//headphone earmuff right
+fill(130, 123, 49);
+arc(x+200*h,y+114*h,85*h,46*h,144,385);//hair
+    
+};
+var drawMouth=function(x,y,h){
+    fill(255, 255, 255);
+arc(x+201*h,y+175*h,55*h,41*h,0,180);//mouth
+line(x+223*h,y+185*h,x+176*h,y+185*h);//teeth
+fill(244, 247, 215);
+ellipse(x+200*h,y+158*h,11*h,24*h);//nose
+noStroke();
+
+ellipse(x+195*h,y+158*h,11*h,24*h);//nose
+};
+
+var drawBitmoji=function(x,y,w){
+    var h= w/120;
+ drawHead(x,y,h);
+ drawHair(x,y,h);
+ drawEyes(x,y,h);
+ drawMouth(x,y,h);
+ drawShirt(x,y,h);
+    
+};
+
+
+var currentLevel=1;
 var currentScene = 0;
+var ballXStart=14;
+var ballYStart=41;
+var playerX=ballXStart;
+var playerY=ballYStart;
+var ballX= ballXStart;
+var ballY=ballYStart;
+var xSpeed=1;
+var ySpeed=0;
+var isGameRunning=false;
+
   // Start of Khan button class
 var Button = function(config) {
     this.x = config.x || 0;
@@ -33,19 +189,178 @@ Button.prototype.handleMouseClick = function() {
     }
 };
 
+
+
+
+
 var startButton= new Button({
  x:100,
     y:200,
-    onClick:function(){currentScene=1;},
+    onClick:function(){currentScene=1;
+    },
     buttonColor:color(199, 48, 101)});
+    
+    
+
+    
 
 
   // End of Kahn button class
-  
-  
-  var splashScreen=function(){
+
+//Function to draw character
+var drawCharacter=function(){
+    image(getImage("avatars/mr-pink"),playerX,playerY,40,40);
+};
+
+// Constructor function for the arrow class
+ var Arrow=function(direction,x,y){
+     this.direction=direction;
+     this.x=x;
+     this.y=y;
+     
+ };
+ //array of arrows
+ var arrows=[];
+ //prototype which draws an arrow
+ Arrow.prototype.draw= function() {
+     if (this.direction==='Right'){
+         fill(255, 0, 0);
+         triangle(this.x+10,this.y,this.x-10,this.y+10,this.x-10,this.y-10);
+     } else if (this.direction==='Left'){
+         fill(255, 0, 0);
+         triangle(this.x-10,this.y,this.x+10,this.y+10,this.x+10,this.y-10);
+     } else if (this.direction==='Down'){
+         fill(255, 0, 0);
+         triangle(this.x-10,this.y-10,this.x+10,this.y-10,this.x,this.y+10);
+     } 
+ };
+ //prototype which checks if the ball comes into contact with an arrow
+Arrow.prototype.checkHit=function(){
+    if(this.x+10>ballX&&this.x-10<ballX&&this.y+10>ballY&&this.y-10<ballY){
+        if(this.direction=== 'Right'){
+            xSpeed=1;
+            ySpeed=0;
+        } else if(this.direction=== 'Left'){
+            xSpeed=-1;
+            ySpeed=0;
+        }else if(this.direction=== 'Down'){
+            xSpeed=0;
+            ySpeed=1;
+        }
+        
+    }
+};
+var drawBall =function(){
+  fill(176, 52, 176);
+  ellipse(ballX,ballY,25,25);
+    
+};
+
+
+
+// Obstacle object clas
+var Obstacle = function(config){
+    //I dont plan on having any diagonal obstacles, so in this case there are only 3 values for points, the x and 
+    this.point1Y=config.point1Y;
+    this.point1X=config.point1X;
+    this.point2=config.point2;
+    
+    this.orientation=config.orientation;
+    
+    
+    
+    
+};
+
+var obs1= new Obstacle({orientation:'vertical',point1X:321,point1Y:70,point2:185});
+var obs2= new Obstacle({orientation:'horizontal',point1X:0,point1Y:70,point2:321});
+var obs3 = new Obstacle({orientation:'horizontal', point1X:21, point1Y:15, point2:399});
+var obs4 = new Obstacle({orientation:'horizontal', point1X:50, point1Y:185, point2:321});
+var obs5= new Obstacle({orientation:'vertical',point1X:50,point1Y:185,point2:320});
+var obs6 = new Obstacle({orientation:'horizontal',point1X:127,point1Y:240,point2:399});
+var obs7 = new Obstacle({orientation:'vertical',point1X:126,point1Y:240,point2:265});
+var obs8 = new Obstacle({orientation:'horizontal', point1X:50, point1Y:320, point2:187});
+var obs9 = new Obstacle({orientation:'horizontal',point1X:127,point1Y:265,point2:399});
+var obs10 = new Obstacle({orientation:'vertical',point1X:187,point1Y:337,point2:320});
+var obs11 = new Obstacle({orientation:'vertical',point1X:253,point1Y:337,point2:320});
+var obs12 = new Obstacle({orientation:'horizontal',point1X:253,point1Y:320,point2:399});
+var obs13 = new Obstacle({orientation:'horizontal',point1X:1,point1Y:337,point2:187});
+var obs14 = new Obstacle({orientation:'horizontal',point1X:253,point1Y:337,point2:399});
+var obs15 = new Obstacle({orientation:'horizontal',point1X:0,point1Y:0,point2:399});
+var obs16 = new Obstacle({orientation:'horizontal',point1X:1,point1Y:399,point2:399});
+var obs17 = new Obstacle({orientation:'vertical',point1X:0,point1Y:0,point2:399});
+var obs18 = new Obstacle({orientation:'vertical',point1X:399,point1Y:1,point2:399});
+var obs19 = new Obstacle({orientation:'horizontal',point1X:0,point1Y:87,point2:211});
+var obs20 = new Obstacle({orientation:'horizontal',point1X:312,point1Y:87,point2:400});
+var obs21 = new Obstacle({orientation:'horizontal',point1X:0,point1Y:187,point2:58});
+var obs22 = new Obstacle({orientation:'horizontal',point1X:165,point1Y:187,point2:400});
+var obs23 = new Obstacle({orientation:'horizontal',point1X:0,point1Y:287,point2:211});
+var obs24 = new Obstacle({orientation:'horizontal',point1X:312,point1Y:287,point2:400});
+var obs25 = new Obstacle({orientation:'vertical',point1X:312,point1Y:287,point2:335});
+var obs26 = new Obstacle({orientation:'horizontal',point1X:78,point1Y:336,point2:400});
+
+var obs27 = new Obstacle({orientation:'horizontal',point1X:100,point1Y:100,point2:300});
+var obs28 = new Obstacle({orientation:'horizontal',point1X:100,point1Y:200,point2:300});
+var obs29 = new Obstacle({orientation:'horizontal',point1X:100,point1Y:300,point2:300});
+
+
+var obstacles=[obs1,obs2,obs3,obs4,obs5,obs6,obs7,obs8,obs9,obs10,obs11,obs12,obs13,obs14,obs15,obs16,obs17,obs18];
+var obstacles2=[obs15,obs16,obs17,obs18,obs19,obs20,obs21,obs22,obs23,obs24,obs25,obs26];
+var obstacles3=[obs15,obs16,obs17,obs18,obs27,obs28,obs29];
+
+//prototype to check if an obstacle has been hit
+Obstacle.prototype.checkHit=function(){
+    
+    if(this.orientation==='vertical'){
+        if(ballX<=10+this.point1X&&
+        ballX>=this.point1X-10&&
+        ballY>this.point1Y&&ballY<this.point2)
+        {
+           currentScene=3;
+           return(true); 
+           
+        }
+    }else if(this.orientation==='horizontal'){
+        if(ballY<=10+this.point1Y&&
+        ballY>=this.point1Y-10&&
+        ballX>this.point1X&&ballX<this.point2)
+        {
+           currentScene=3;
+           return(true); 
+           
+        }
+    }
+    
+};
+    //prototype to draw obstacles
+Obstacle.prototype.draw = function() {
+    
+    if(this.orientation==='vertical'){
+    line(this.point1X,this.point1Y,this.point1X,this.point2);
+    } else{
+         line(this.point1X,this.point1Y,this.point2,this.point1Y);
+    }
+};
+
+//Key Pressed 
+keyPressed = function() {
+    if(keyCode===ALT){
+        arrows.push(new Arrow('Left',playerX,playerY));
+        isGameRunning=true;
+        
+    } else if(keyCode===SHIFT){
+         arrows.push(new Arrow('Right',playerX,playerY));
+         isGameRunning=true;
+    }  else if(keyCode===CONTROL){
+         arrows.push(new Arrow('Down',playerX,playerY));
+         isGameRunning=true;
+    } 
+};
+//Funtion to draw screen 1
+ var splashScreen=function(){
        fill(255, 255, 255);
   background(3, 198, 252);
+   drawBitmoji2(47,194,60);
   textSize(52);
   text(" Ball Maze",21,46);
   fill(127, 143, 141);
@@ -56,27 +371,241 @@ var startButton= new Button({
     textSize(15);
     fill(255, 255, 255);
   text("By: Akram Abdelrehem and Jack Nystrom",87,114);
+  fill(251, 0, 255);
+   text("Guide the ball to the goal and avoid the walls:",87,273);
+    text("Use the control Key to place down arrows",87,291);
+      text("Use the Shift Key to place right arrows",87,311);
+       text("Use the Alt Key to place Left arrows",87,331);
+       drawBitmoji(222,115,60);
+      
       
   };
-  
-  var screen2=function(){
-   background(33, 26, 33);
- };
+//screen if the player loses
+//Button that Takes the player back to the game scene and resets the board
+var retryButton= new Button({
+ x:100,
+    y:200,
+    onClick:function(){
+        //resets the ball position and arrows and brings the player back to the level they were on
+        if(currentLevel===1){
+            currentScene=1;
+        }else if(currentLevel===2){
+            currentScene=4;
+        }else if(currentLevel===3){
+            currentScene=5;
+        }
+    
+    
+    ballX=ballXStart; ballY=ballYStart;
+    isGameRunning=false;xSpeed=1;ySpeed=0;arrows=[];},
+    label:'retry',
+    buttonColor:color(199, 48, 101)});
 
-  draw = function() {
-       if(currentScene===0){
+var loseScene=function(){
+    background(207, 0, 207);
+    textSize(52);
+  text(" You Lose",21,46);
+  retryButton.draw();
+   image(getImage("creatures/OhNoes"),140,261,100,100);
+};
+//function that draws the win screen
+var winScene=function(){
+   background(14, 207, 0);
+   fill(0, 230, 255);
+    textSize(52);
+  text(" You Win",21,46);
+  image(getImage("creatures/OhNoes-Happy"),200,200,100,100);
+};
+//function to draw screen 2
+  var screen2=function(){
+  
+ background(255, 252, 252);
+ drawCharacter();
+ 
+    drawBall();
+    if(isGameRunning){
+    ballX=ballX+xSpeed;
+    ballY=ballY+ySpeed;
+    }
+    
+    for(var i=0;i<arrows.length;i++){
+     arrows[i].draw(); 
+     arrows[i].checkHit();
+    }
+    
+     for(var i=0;i<obstacles.length;i++){
+     obstacles[i].draw(); 
+     obstacles[i].checkHit();
+     
+    }
+    fill(204, 136, 41);
+    rect(357,359,5,30);
+    fill(80, 207, 33);
+     rect(357,359,30,15);
+         fill(22, 196, 56);
+      textSize(20);
+  text('Maze 1',79,120,100,100);
+  
+     //if statement that sends the game to the second maze if the ball touches the goal
+     if(ballX>357&&ballX<387&&ballY>349&&ballY<389){
+         ballX=ballXStart; 
+         ballY=ballYStart;
+    isGameRunning=false;
+    xSpeed=1;
+    ySpeed=0;
+    arrows=[];
+    currentLevel=2;
+   
+    currentScene=4;
+     }
+  };
+  var secondMaze=function(){
+      background(247, 244, 247);
+      
+      drawCharacter();
+ 
+    drawBall();
+    if(isGameRunning){
+    ballX=ballX+xSpeed;
+    ballY=ballY+ySpeed;
+    }
+    
+    for(var i=0;i<arrows.length;i++){
+     arrows[i].draw(); 
+     arrows[i].checkHit();
+    }
+    
+     for(var i=0;i<obstacles2.length;i++){
+     obstacles2[i].draw(); 
+     obstacles2[i].checkHit();
+     
+    }
+    fill(204, 136, 41);
+    rect(357,359,5,30);
+    fill(80, 207, 33);
+     rect(357,359,30,15);
+          fill(22, 196, 56);
+      textSize(20);
+  text('Maze 2',329,299,100,100);
+     //if statement that ends the game if the ball touches the goal
+     if(ballX>357&&ballX<387&&ballY>349&&ballY<399){
+         ballX=ballXStart; 
+         ballY=ballYStart;
+    isGameRunning=false;
+    xSpeed=1;
+    ySpeed=0;
+    arrows=[];
+    currentLevel=3;
+         currentScene=5;
+     }
+  };
+  //count variable to decide when to switch the direction of the obstacles movement
+  var count=0;
+  
+  var speed1=1;
+  var speed2=-1;
+  
+  var thirdMaze=function(){
+      
+      
+      
+     
+       background(247, 244, 247);
+      
+      drawCharacter();
+ 
+    drawBall();
+    if(isGameRunning){
+    ballX=ballX+xSpeed;
+    ballY=ballY+ySpeed;
+    }
+    
+    for(var i=0;i<arrows.length;i++){
+         
+     arrows[i].draw(); 
+     arrows[i].checkHit();
+    }
+    //switched direction of obstacles every 70 pixels
+    count++;
+    if(count%70===0){
+       speed1=-speed1;
+       speed2=-speed2;
+    }
+     for(var i=0;i<obstacles3.length;i++){
+         for(var j=4;j<obstacles3.length;j++){
+             if(j%2===0){
+                 obstacles3[j].point1X= obstacles3[j].point1X+speed1;
+                obstacles3[j].point2= obstacles3[j].point2+speed1;
+                
+             } else {
+                 obstacles3[j].point1X= obstacles3[j].point1X+speed2;
+                obstacles3[j].point2= obstacles3[j].point2+speed2;
+                
+             }
+         }
+     obstacles3[i].draw(); 
+     obstacles3[i].checkHit();
+     
+    }
+    fill(204, 136, 41);
+    rect(357,359,5,30);
+    fill(80, 207, 33);
+     rect(357,359,30,15);
+          fill(22, 196, 56);
+      textSize(20);
+  text('Maze 3',329,299,100,100);
+     //if statement that ends the game if the ball touches the goal
+     if(ballX>357&&ballX<387&&ballY>349&&ballY<399){
+         
+         currentScene=2;
+     }
+  };
+  
+  
+  
+// DRAW FUNCTION
+draw=function(){
+  
+        if(keyIsPressed){
+     if(keyCode=== UP){
+         playerY-=2;
+     }
+      if(keyCode===DOWN){
+      playerY+=2;
+     }  if (keyCode===RIGHT){
+      playerX+=2;   
+     } if (keyCode===LEFT){
+         playerX-=2;
+     }
+    }
+    
+    if(currentScene===0){
            splashScreen();
        }else if (currentScene===1){
            screen2();
+           
+       } else if (currentScene===3){
+        loseScene();   
+       }else if (currentScene===2){
+        winScene();   
+       }else if(currentScene===4){
+           secondMaze();
+       }else if (currentScene===5){
+           thirdMaze();
        }
-     
   };
-  
   
   //Mouse clicked function
   
   mouseClicked= function(){
       if(currentScene===0){
           startButton.handleMouseClick();
+      } else if (currentScene===3){
+          retryButton.handleMouseClick();
       }
   };
+ 
+  
+
+
+
